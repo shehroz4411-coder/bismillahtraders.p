@@ -1,0 +1,1705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Contact | SPANISH Fast Food</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- MAIN CSS -->
+
+    <link
+        rel="stylesheet"
+        href="spanish.css"
+    >
+
+
+    <style>
+
+        /* =========================================
+           CONTACT HERO
+        ========================================= */
+
+        .contact-hero {
+
+            min-height: 430px;
+
+            padding: 150px 20px 80px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            background:
+
+                linear-gradient(
+                    rgba(0,0,0,.78),
+                    rgba(0,0,0,.92)
+                ),
+
+                url("images/contact-hero.jpg")
+                center/cover;
+
+        }
+
+
+        .contact-hero span {
+
+            color: #ff3b20;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .contact-hero h1 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(48px,7vw,80px);
+
+            line-height: 1;
+
+            margin: 15px 0;
+
+        }
+
+
+        .contact-hero h1 strong {
+
+            color: #ff3b20;
+
+        }
+
+
+        .contact-hero p {
+
+            max-width: 550px;
+
+            margin: auto;
+
+            color: #999;
+
+            font-size: 12px;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* =========================================
+           CONTACT SECTION
+        ========================================= */
+
+        .contact-section {
+
+            padding: 100px 0;
+
+        }
+
+
+        .contact-container {
+
+            width: min(1200px,92%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                .8fr 1.2fr;
+
+            gap: 60px;
+
+        }
+
+
+
+        /* =========================================
+           LEFT SIDE
+        ========================================= */
+
+        .contact-info span {
+
+            color: #ff3b20;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .contact-info h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(38px,5vw,55px);
+
+            line-height: 1.05;
+
+            margin: 15px 0 20px;
+
+        }
+
+
+        .contact-info > p {
+
+            color: #888;
+
+            font-size: 12px;
+
+            line-height: 1.9;
+
+            margin-bottom: 35px;
+
+        }
+
+
+        /* CONTACT CARDS */
+
+        .contact-cards {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 14px;
+
+        }
+
+
+        .contact-card {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 18px;
+
+            padding: 18px;
+
+            background: #151515;
+
+            border: 1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 12px;
+
+            transition: .3s;
+
+        }
+
+
+        .contact-card:hover {
+
+            transform:
+                translateX(5px);
+
+            border-color:
+                rgba(255,59,32,.4);
+
+        }
+
+
+        .contact-icon {
+
+            width: 48px;
+
+            height: 48px;
+
+            flex-shrink: 0;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background:
+                rgba(255,59,32,.1);
+
+            color: #ff3b20;
+
+            font-size: 20px;
+
+        }
+
+
+        .contact-card small {
+
+            display: block;
+
+            color: #666;
+
+            font-size: 8px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 5px;
+
+        }
+
+
+        .contact-card strong {
+
+            display: block;
+
+            color: #ddd;
+
+            font-size: 12px;
+
+        }
+
+
+        .contact-card a {
+
+            color: #ddd;
+
+        }
+
+
+        .contact-card a:hover {
+
+            color: #ff3b20;
+
+        }
+
+
+
+        /* =========================================
+           FORM
+        ========================================= */
+
+        .contact-form-box {
+
+            padding: 35px;
+
+            background: #151515;
+
+            border: 1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 18px;
+
+        }
+
+
+        .contact-form-heading {
+
+            margin-bottom: 28px;
+
+        }
+
+
+        .contact-form-heading span {
+
+            color: #ff3b20;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .contact-form-heading h3 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 32px;
+
+            margin-top: 7px;
+
+        }
+
+
+        .form-row {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+
+        }
+
+
+        .form-group {
+
+            margin-bottom: 17px;
+
+        }
+
+
+        .form-group label {
+
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #aaa;
+
+            font-size: 9px;
+
+            font-weight: 700;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+
+            width: 100%;
+
+            padding: 14px 15px;
+
+            background: #0d0d0d;
+
+            border: 1px solid
+                rgba(255,255,255,.08);
+
+            border-radius: 7px;
+
+            color: white;
+
+            outline: none;
+
+            font-family:
+                "Montserrat",
+                sans-serif;
+
+            font-size: 11px;
+
+            transition: .3s;
+
+        }
+
+
+        .form-group textarea {
+
+            min-height: 130px;
+
+            resize: vertical;
+
+        }
+
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+
+            border-color: #ff3b20;
+
+            box-shadow:
+                0 0 0 3px
+                rgba(255,59,32,.08);
+
+        }
+
+
+        .form-group select option {
+
+            background: #151515;
+
+        }
+
+
+        .send-button {
+
+            width: 100%;
+
+            padding: 16px;
+
+            background: #ff3b20;
+
+            color: white;
+
+            border-radius: 8px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            cursor: pointer;
+
+            transition: .3s;
+
+        }
+
+
+        .send-button:hover {
+
+            background: #d92710;
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+
+        /* =========================================
+           OPENING HOURS
+        ========================================= */
+
+        .hours-section {
+
+            padding: 90px 0;
+
+            background: #0d0d0d;
+
+        }
+
+
+        .hours-container {
+
+            width: min(900px,92%);
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+
+        .hours-container > span {
+
+            color: #ff3b20;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .hours-container h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 48px;
+
+            margin: 12px 0 35px;
+
+        }
+
+
+        .hours-list {
+
+            background: #151515;
+
+            border: 1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 15px;
+
+            overflow: hidden;
+
+        }
+
+
+        .hour-row {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            padding: 17px 22px;
+
+            border-bottom: 1px solid
+                rgba(255,255,255,.06);
+
+            color: #888;
+
+            font-size: 11px;
+
+        }
+
+
+        .hour-row:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .hour-row strong {
+
+            color: #ddd;
+
+        }
+
+
+        .hour-row.today strong {
+
+            color: #ff3b20;
+
+        }
+
+
+
+        /* =========================================
+           LOCATION
+        ========================================= */
+
+        .location-section {
+
+            padding: 100px 0;
+
+        }
+
+
+        .location-container {
+
+            width: min(1200px,92%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 30px;
+
+        }
+
+
+        .location-box {
+
+            min-height: 330px;
+
+            padding: 35px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            background: #151515;
+
+            border: 1px solid
+                rgba(255,255,255,.07);
+
+            border-radius: 18px;
+
+        }
+
+
+        .location-box span {
+
+            color: #ff3b20;
+
+            font-size: 9px;
+
+            font-weight: 800;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .location-box h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 40px;
+
+            margin: 10px 0 15px;
+
+        }
+
+
+        .location-box p {
+
+            color: #888;
+
+            font-size: 11px;
+
+            line-height: 1.8;
+
+        }
+
+
+        .map-box {
+
+            min-height: 330px;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            border: 1px solid
+                rgba(255,255,255,.07);
+
+            background: #111;
+
+        }
+
+
+        .map-box iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            min-height: 330px;
+
+            border: 0;
+
+            filter:
+                grayscale(100%)
+                invert(90%);
+
+        }
+
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media(max-width:800px) {
+
+            .contact-hero {
+
+                min-height: 360px;
+
+                padding-top: 120px;
+
+            }
+
+
+            .contact-section {
+
+                padding: 65px 0;
+
+            }
+
+
+            .contact-container {
+
+                grid-template-columns: 1fr;
+
+                gap: 40px;
+
+            }
+
+
+            .contact-form-box {
+
+                padding: 25px 18px;
+
+            }
+
+
+            .form-row {
+
+                grid-template-columns: 1fr;
+
+                gap: 0;
+
+            }
+
+
+            .hours-section {
+
+                padding: 65px 0;
+
+            }
+
+
+            .hours-container h2 {
+
+                font-size: 38px;
+
+            }
+
+
+            .location-section {
+
+                padding: 65px 0;
+
+            }
+
+
+            .location-container {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="navbar">
+
+    <div class="nav-container">
+
+
+        <a
+            href="index.html"
+            class="logo"
+        >
+
+            <span>SPANISH</span>
+
+            <small>FAST FOOD</small>
+
+        </a>
+
+
+        <nav
+            class="nav-links"
+            id="navLinks"
+        >
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a
+                href="contact.html"
+                class="active"
+            >
+                Contact
+            </a>
+
+            <a href="developer.html">
+                ?Developer?
+            </a>
+
+
+            <a
+                href="https://wa.me/923173664422"
+                target="_blank"
+                class="nav-order"
+            >
+                Order Now
+            </a>
+
+        </nav>
+
+
+        <div class="nav-actions">
+
+
+            <button
+                class="cart-btn"
+                id="openCart"
+            >
+
+                🛒
+
+                <span id="cartCount">
+                    0
+                </span>
+
+            </button>
+
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="contact-hero">
+
+    <div>
+
+        <span>
+            WE'D LOVE TO HEAR FROM YOU
+        </span>
+
+
+        <h1>
+
+            Let's
+            <strong>
+                Talk.
+            </strong>
+
+        </h1>
+
+
+        <p>
+
+            Got a question, want to place an order,
+            or just craving something delicious?
+            We're only one message away.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CONTACT
+========================================= -->
+
+<section class="contact-section">
+
+    <div class="contact-container">
+
+
+        <!-- LEFT -->
+
+        <div class="contact-info">
+
+            <span>
+                GET IN TOUCH
+            </span>
+
+
+            <h2>
+                We're Here
+                For You.
+            </h2>
+
+
+            <p>
+
+                Whether you want to order your
+                favourite food or have a question,
+                contact the SPANISH team anytime.
+
+            </p>
+
+
+            <div class="contact-cards">
+
+
+                <!-- BRANCH INFORMATION -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div>
+
+                        <small>
+                            CHOOSE YOUR BRANCH
+                        </small>
+
+                        <strong>
+                            Aap jis city se order kar rahe hain,
+                            us branch ka WhatsApp ya Call use karein.
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- TAXILA BRANCH -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div style="width:100%;">
+
+                        <small>
+                            TAXILA BRANCH
+                        </small>
+
+                        <strong>
+                            0317 3664422
+                        </strong>
+
+
+                        <div
+                            style="
+                                display:flex;
+                                gap:8px;
+                                margin-top:10px;
+                                flex-wrap:wrap;
+                            "
+                        >
+
+                            <!-- TAXILA WHATSAPP -->
+
+                            <a
+                                href="https://wa.me/923173664422"
+                                target="_blank"
+                                style="
+                                    padding:8px 12px;
+                                    background:#25D366;
+                                    color:white !important;
+                                    border-radius:6px;
+                                    font-size:9px;
+                                    font-weight:800;
+                                    text-decoration:none;
+                                "
+                            >
+                                💬 WHATSAPP
+                            </a>
+
+
+                            <!-- TAXILA CALL -->
+
+                            <a
+                                href="tel:+923173664422"
+                                style="
+                                    padding:8px 12px;
+                                    background:#ff3b20;
+                                    color:white !important;
+                                    border-radius:6px;
+                                    font-size:9px;
+                                    font-weight:800;
+                                    text-decoration:none;
+                                "
+                            >
+                                ☎ CALL
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- HASSAN ABDAL BRANCH -->
+
+                <div class="contact-card">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+                    <div style="width:100%;">
+
+                        <small>
+                            HASSAN ABDAL BRANCH
+                        </small>
+
+                        <strong>
+                            0315 5494443
+                        </strong>
+
+
+                        <div
+                            style="
+                                display:flex;
+                                gap:8px;
+                                margin-top:10px;
+                                flex-wrap:wrap;
+                            "
+                        >
+
+                            <!-- HASSAN ABDAL WHATSAPP -->
+
+                            <a
+                                href="https://wa.me/923155494443"
+                                target="_blank"
+                                style="
+                                    padding:8px 12px;
+                                    background:#25D366;
+                                    color:white !important;
+                                    border-radius:6px;
+                                    font-size:9px;
+                                    font-weight:800;
+                                    text-decoration:none;
+                                "
+                            >
+                                💬 WHATSAPP
+                            </a>
+
+
+                            <!-- HASSAN ABDAL CALL -->
+
+                            <a
+                                href="tel:+923155494443"
+                                style="
+                                    padding:8px 12px;
+                                    background:#ff3b20;
+                                    color:white !important;
+                                    border-radius:6px;
+                                    font-size:9px;
+                                    font-weight:800;
+                                    text-decoration:none;
+                                "
+                            >
+                                ☎ CALL
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FORM -->
+
+        <div class="contact-form-box">
+
+
+            <div class="contact-form-heading">
+
+                <span>
+                    SEND A MESSAGE
+                </span>
+
+                <h3>
+                    Contact SPANISH
+                </h3>
+
+            </div>
+
+
+            <form id="contactForm">
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            YOUR NAME
+                        </label>
+
+                        <input
+                            type="text"
+                            id="customerName"
+                            placeholder="Enter your name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            PHONE NUMBER
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="customerPhone"
+                            placeholder="03XX XXXXXXX"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        EMAIL
+                    </label>
+
+                    <input
+                        type="email"
+                        id="customerEmail"
+                        placeholder="your@email.com"
+                    >
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        SUBJECT
+                    </label>
+
+                    <select
+                        id="customerSubject"
+                        required
+                    >
+
+                        <option value="">
+                            Select a subject
+                        </option>
+
+                        <option value="Food Order">
+                            Food Order
+                        </option>
+
+                        <option value="Reservation">
+                            Reservation
+                        </option>
+
+                        <option value="General Question">
+                            General Question
+                        </option>
+
+                        <option value="Feedback">
+                            Feedback
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <div class="form-group">
+
+                    <label>
+                        MESSAGE
+                    </label>
+
+                    <textarea
+                        id="customerMessage"
+                        placeholder="Write your message..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="send-button"
+                >
+
+                    SEND ON WHATSAPP →
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     OPENING HOURS
+========================================= -->
+
+<section class="hours-section">
+
+    <div class="hours-container">
+
+        <span>
+            COME VISIT US
+        </span>
+
+
+        <h2>
+            Opening Hours
+        </h2>
+
+
+        <div class="hours-list">
+
+
+            <div class="hour-row">
+
+                <span>
+                    Monday
+                </span>
+
+                <strong>
+                    11:00 AM – 12:00 AM
+                </strong>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Tuesday
+                </span>
+
+                <strong>
+                    11:00 AM – 12:00 AM
+                </strong>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Wednesday
+                </span>
+
+                <strong>
+                    11:00 AM – 12:00 AM
+                </strong>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Thursday
+                </span>
+
+                <strong>
+                    11:00 AM – 12:00 AM
+                </strong>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Friday
+                </span>
+
+                <strong>
+                    02:00 PM – 01:00 AM
+                </strong>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Saturday
+                </span>
+
+                <strong>
+                    11:00 AM – 01:00 AM
+                </strong>
+
+            </div>
+
+
+            <div class="hour-row">
+
+                <span>
+                    Sunday
+                </span>
+
+                <strong>
+                    11:00 AM – 12:00 AM
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     LOCATION
+========================================= -->
+
+<section class="location-section">
+
+    <div class="location-container">
+
+
+        <div class="location-box">
+
+            <span>
+                FIND US
+            </span>
+
+
+            <h2>
+                Come Hungry.
+                Leave Happy.
+            </h2>
+
+
+            <p>
+
+                We're getting your favourite
+                food ready. Replace this text
+                with your exact restaurant
+                address.
+
+            </p>
+
+
+            <a
+                href="https://wa.me/923173664422"
+                target="_blank"
+                class="btn btn-primary"
+                style="
+                    margin-top:20px;
+                    display:inline-block;
+                    width:max-content;
+                "
+            >
+                ASK FOR LOCATION →
+            </a>
+
+        </div>
+
+
+        <!-- MAP -->
+
+        <div class="map-box">
+
+            <iframe
+                src="https://www.google.com/maps?q=Taxila%20Pakistan&output=embed"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+            >
+            </iframe>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CART
+========================================= -->
+
+<div
+    class="cart-overlay"
+    id="cartOverlay"
+></div>
+
+
+<aside
+    class="cart-drawer"
+    id="cartDrawer"
+>
+
+
+    <div class="cart-header">
+
+        <div>
+
+            <span>
+                YOUR ORDER
+            </span>
+
+            <h2>
+                Shopping Cart
+            </h2>
+
+        </div>
+
+
+        <button
+            id="closeCart"
+            class="close-cart"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+    </div>
+
+
+    <div class="cart-footer">
+
+
+        <div class="cart-total">
+
+            <span>
+                Total
+            </span>
+
+            <strong id="cartTotal">
+                Rs. 0
+            </strong>
+
+        </div>
+
+
+        <button
+            id="checkoutBtn"
+            class="checkout-btn"
+        >
+            Proceed to Checkout →
+        </button>
+
+
+        <p class="checkout-note">
+
+            Your order will be sent to
+            SPANISH on WhatsApp.
+
+        </p>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =========================================
+     FLOATING WHATSAPP
+========================================= -->
+
+<a
+    href="https://wa.me/923173664422"
+    target="_blank"
+    class="floating-whatsapp"
+    aria-label="Order on WhatsApp"
+>
+    💬
+</a>
+
+
+
+<!-- =========================================
+     CONTACT FORM JAVASCRIPT
+========================================= -->
+
+<script>
+
+    const contactForm =
+        document.getElementById(
+            "contactForm"
+        );
+
+
+    contactForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const name =
+                document.getElementById(
+                    "customerName"
+                ).value.trim();
+
+
+            const phone =
+                document.getElementById(
+                    "customerPhone"
+                ).value.trim();
+
+
+            const email =
+                document.getElementById(
+                    "customerEmail"
+                ).value.trim();
+
+
+            const subject =
+                document.getElementById(
+                    "customerSubject"
+                ).value;
+
+
+            const message =
+                document.getElementById(
+                    "customerMessage"
+                ).value.trim();
+
+
+            const whatsappMessage =
+
+`🍔 SPANISH CONTACT MESSAGE
+
+Name: ${name}
+
+Phone: ${phone}
+
+Email: ${email || "Not provided"}
+
+Subject: ${subject}
+
+Message:
+${message}
+
+--------------------------
+Sent from SPANISH Website`;
+
+
+            const whatsappURL =
+
+                "https://wa.me/923173664422?text=" +
+                encodeURIComponent(
+                    whatsappMessage
+                );
+
+
+            window.open(
+                whatsappURL,
+                "_blank"
+            );
+
+        }
+    );
+
+</script>
+
+
+<!-- =========================================
+     DEVELOPER CREDIT
+========================================= -->
+
+<footer class="developer-credit">
+
+    <div class="developer-line"></div>
+
+    <p class="developer-made">
+        THIS WEBSITE WAS DESIGNED & DEVELOPED BY
+    </p>
+
+    <h3>
+        SHEHROZ KHAN
+    </h3>
+
+    <span class="developer-role">
+        FULL-STACK WEB DEVELOPER
+    </span>
+
+    <p class="developer-rights">
+        © 2026 SPANISH — All Rights Reserved.
+    </p>
+
+</footer>
+
+
+<!-- MAIN JS -->
+
+<script src="script.js"></script>
+
+</body>
+</html>
