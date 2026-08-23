@@ -1,0 +1,2815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#090909">
+
+    <title>Spanish | Menu</title>
+
+    <link rel="stylesheet" href="spanish.css">
+
+    <style>
+
+        /* =====================================================
+           MENU PAGE
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #080808;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        .menu-page {
+            padding: 115px 0 100px;
+        }
+
+
+        /* =====================================================
+           NAV CART
+        ===================================================== */
+
+        .nav-cart {
+            position: relative;
+
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #151515;
+
+            color: white;
+
+            font-size: 19px;
+
+            text-decoration: none;
+
+            cursor: pointer;
+
+            transition: .25s;
+        }
+
+        .nav-cart:hover {
+            background: #e31b23;
+        }
+
+        #navCartCount {
+            position: absolute;
+
+            top: -4px;
+            right: -4px;
+
+            min-width: 18px;
+            height: 18px;
+
+            padding: 0 4px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 50%;
+
+            background: #e31b23;
+
+            color: white;
+
+            font-size: 8px;
+
+            font-weight: 900;
+        }
+
+
+        /* =====================================================
+           HEADING
+        ===================================================== */
+
+        .menu-heading {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .menu-heading span {
+            color: #e31b23;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+            letter-spacing: 3px;
+        }
+
+        .menu-heading h1 {
+            margin: 8px 0;
+
+            font-size: clamp(35px, 7vw, 60px);
+
+            line-height: 1;
+        }
+
+        .menu-heading p {
+            margin: 0;
+
+            color: #888;
+
+            font-size: 12px;
+        }
+
+
+        /* =====================================================
+           CATEGORY BAR
+        ===================================================== */
+
+        .categories {
+            display: flex;
+
+            gap: 8px;
+
+            overflow-x: auto;
+
+            padding: 4px 2px 16px;
+
+            margin-bottom: 10px;
+
+            scrollbar-width: none;
+        }
+
+        .categories::-webkit-scrollbar {
+            display: none;
+        }
+
+        .category-btn {
+            flex: 0 0 auto;
+
+            border: 1px solid #252525;
+
+            background: #111;
+
+            color: #aaa;
+
+            border-radius: 50px;
+
+            padding: 11px 17px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            white-space: nowrap;
+
+            transition: .2s;
+        }
+
+        .category-btn.active,
+        .category-btn:hover {
+            background: #e31b23;
+
+            border-color: #e31b23;
+
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           FOOD GRID
+        ===================================================== */
+
+        .food-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 16px;
+        }
+
+
+        /* =====================================================
+           FOOD CARD
+        ===================================================== */
+
+        .food-card {
+            overflow: hidden;
+
+            background: #111;
+
+            border: 1px solid #202020;
+
+            border-radius: 16px;
+
+            transition: .25s;
+        }
+
+        .food-card:hover {
+            transform: translateY(-4px);
+
+            border-color: #3a1517;
+        }
+
+        .food-image {
+            width: 100%;
+
+            height: 210px;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        .food-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+
+            transition: .4s;
+        }
+
+        .food-card:hover .food-image img {
+            transform: scale(1.06);
+        }
+
+        .food-tag {
+            position: absolute;
+
+            top: 10px;
+            left: 10px;
+
+            background: #e31b23;
+
+            color: white;
+
+            padding: 5px 9px;
+
+            border-radius: 30px;
+
+            font-size: 7px;
+
+            font-weight: 900;
+        }
+
+        .food-info {
+            padding: 13px;
+        }
+
+        .food-info h3 {
+            margin: 0 0 5px;
+
+            font-size: 14px;
+        }
+
+        .food-info p {
+            margin: 0 0 12px;
+
+            color: #777;
+
+            font-size: 9px;
+
+            line-height: 1.5;
+
+            min-height: 28px;
+        }
+
+        .food-bottom {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 7px;
+        }
+
+        .food-price {
+            font-size: 13px;
+
+            font-weight: 900;
+        }
+
+        .add-btn {
+            border: none;
+
+            background: #e31b23;
+
+            color: #fff;
+
+            border-radius: 50px;
+
+            padding: 9px 13px;
+
+            font-size: 8px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+        }
+
+        .add-btn:active {
+            transform: scale(.94);
+        }
+
+
+        /* =====================================================
+           CART OVERLAY
+        ===================================================== */
+
+        .cart-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            z-index: 2000;
+
+            background: rgba(0,0,0,.75);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition: .3s;
+        }
+
+        .cart-overlay.active {
+            opacity: 1;
+
+            visibility: visible;
+        }
+
+
+        /* =====================================================
+           CART
+        ===================================================== */
+
+        .cart {
+            position: fixed;
+
+            z-index: 2001;
+
+            top: 0;
+            right: -500px;
+
+            width: min(470px, 100%);
+
+            height: 100vh;
+
+            overflow-y: auto;
+
+            background: #0d0d0d;
+
+            transition: .35s ease;
+
+            box-shadow:
+                -10px 0 40px rgba(0,0,0,.5);
+        }
+
+        .cart.active {
+            right: 0;
+        }
+
+        .cart-header {
+            position: sticky;
+
+            top: 0;
+
+            z-index: 5;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            padding: 18px;
+
+            background: #0d0d0d;
+
+            border-bottom: 1px solid #222;
+        }
+
+        .cart-header h2 {
+            margin: 0;
+
+            font-size: 18px;
+        }
+
+        .close-cart {
+            width: 36px;
+            height: 36px;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            background: #1c1c1c;
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+        }
+
+        .cart-body {
+            padding: 15px;
+        }
+
+
+        /* =====================================================
+           CART ITEMS
+        ===================================================== */
+
+        .cart-item {
+            display: grid;
+
+            grid-template-columns:
+                62px 1fr auto;
+
+            gap: 10px;
+
+            padding: 12px 0;
+
+            border-bottom: 1px solid #202020;
+        }
+
+        .cart-item-image {
+            width: 62px;
+            height: 62px;
+
+            overflow: hidden;
+
+            border-radius: 10px;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+        }
+
+        .cart-item-name {
+            margin: 0 0 4px;
+
+            font-size: 11px;
+        }
+
+        .cart-item-price {
+            margin: 0;
+
+            color: #888;
+
+            font-size: 8px;
+        }
+
+        .quantity {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+
+            margin-top: 7px;
+        }
+
+        .quantity button {
+            width: 24px;
+            height: 24px;
+
+            border: 0;
+
+            border-radius: 50%;
+
+            background: #222;
+
+            color: white;
+
+            cursor: pointer;
+        }
+
+        .quantity span {
+            min-width: 15px;
+
+            text-align: center;
+
+            font-size: 9px;
+
+            font-weight: 900;
+        }
+
+        .remove {
+            margin-top: 5px;
+
+            padding: 0;
+
+            border: 0;
+
+            background: transparent;
+
+            color: #e31b23;
+
+            font-size: 8px;
+
+            cursor: pointer;
+        }
+
+        .cart-item-total {
+            font-size: 10px;
+
+            font-weight: 900;
+
+            white-space: nowrap;
+        }
+
+
+        /* =====================================================
+           CART SECTION
+        ===================================================== */
+
+        .cart-section {
+            margin-top: 20px;
+
+            padding-top: 17px;
+
+            border-top: 1px solid #222;
+        }
+
+        .cart-section h3 {
+            margin: 0 0 12px;
+
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           BRANCH
+        ===================================================== */
+
+        .branch-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 8px;
+        }
+
+        .branch-option input {
+            display: none;
+        }
+
+        .branch-option label {
+            display: block;
+
+            padding: 12px;
+
+            background: #151515;
+
+            border: 1px solid #252525;
+
+            border-radius: 10px;
+
+            cursor: pointer;
+        }
+
+        .branch-option strong {
+            display: block;
+
+            font-size: 9px;
+
+            margin-bottom: 4px;
+        }
+
+        .branch-option small {
+            color: #777;
+
+            font-size: 7px;
+        }
+
+        .branch-option input:checked + label {
+            border-color: #e31b23;
+
+            background: rgba(227,27,35,.12);
+        }
+
+
+        /* =====================================================
+           PAYMENT
+        ===================================================== */
+
+        .payment-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 8px;
+        }
+
+        .payment-option input {
+            display: none;
+        }
+
+        .payment-option label {
+            display: block;
+
+            padding: 13px;
+
+            text-align: center;
+
+            background: #151515;
+
+            border: 1px solid #252525;
+
+            border-radius: 10px;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+        }
+
+        .payment-option input:checked + label {
+            border-color: #e31b23;
+
+            background: rgba(227,27,35,.12);
+        }
+
+        .payment-info {
+            margin-top: 9px;
+
+            padding: 12px;
+
+            background: #151515;
+
+            border-radius: 9px;
+
+            color: #999;
+
+            font-size: 8px;
+
+            line-height: 1.6;
+        }
+
+        .payment-info strong {
+            color: #fff;
+        }
+
+
+        /* =====================================================
+           SCREENSHOT
+        ===================================================== */
+
+        .screenshot {
+            margin-top: 10px;
+
+            padding: 12px;
+
+            border: 1px dashed #444;
+
+            border-radius: 9px;
+
+            background: #111;
+        }
+
+        .screenshot p {
+            margin: 0 0 8px;
+
+            color: #aaa;
+
+            font-size: 8px;
+        }
+
+        .screenshot input {
+            width: 100%;
+
+            font-size: 8px;
+            color: #999;
+        }
+
+
+        /* =====================================================
+           TOTAL
+        ===================================================== */
+
+        .total-box {
+            margin-top: 20px;
+
+            padding-top: 15px;
+
+            border-top: 1px solid #222;
+        }
+
+        .total-row {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            margin-bottom: 8px;
+
+            color: #999;
+
+            font-size: 9px;
+        }
+
+        .total-row strong {
+            color: #fff;
+        }
+
+        .final-total {
+            margin-top: 10px;
+
+            padding-top: 12px;
+
+            border-top: 1px solid #222;
+        }
+
+        .final-total span {
+            color: #fff;
+
+            font-size: 12px;
+
+            font-weight: 900;
+        }
+
+        .final-total strong {
+            color: #e31b23;
+
+            font-size: 18px;
+        }
+
+
+        /* =====================================================
+           WHATSAPP
+        ===================================================== */
+
+        .whatsapp-btn {
+            width: 100%;
+
+            margin-top: 14px;
+
+            padding: 15px;
+
+            border: 0;
+
+            border-radius: 50px;
+
+            background: #20c56a;
+
+            color: white;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            cursor: pointer;
+
+            transition: .2s;
+        }
+
+        .whatsapp-btn:hover {
+            filter: brightness(.9);
+        }
+
+
+        /* =====================================================
+           EMPTY
+        ===================================================== */
+
+        .empty {
+            text-align: center;
+
+            padding: 50px 10px;
+        }
+
+        .empty-icon {
+            font-size: 42px;
+
+            margin-bottom: 10px;
+        }
+
+        .empty h3 {
+            margin: 0 0 6px;
+
+            font-size: 15px;
+        }
+
+        .empty p {
+            margin: 0;
+
+            color: #777;
+
+            font-size: 9px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 900px) {
+
+            .food-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+                gap: 10px;
+            }
+
+            .food-image {
+                height: 175px;
+            }
+        }
+
+
+        @media (max-width: 650px) {
+
+            .container {
+                width: 94%;
+            }
+
+            .menu-page {
+                padding-top: 100px;
+            }
+
+            .menu-heading {
+                margin-bottom: 20px;
+            }
+
+            .menu-heading span {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
+
+            .menu-heading h1 {
+                font-size: 36px;
+            }
+
+            .menu-heading p {
+                font-size: 9px;
+            }
+
+            .categories {
+                margin-bottom: 8px;
+            }
+
+            .category-btn {
+                padding: 9px 13px;
+
+                font-size: 8px;
+            }
+
+            .food-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+                gap: 8px;
+            }
+
+            .food-card {
+                border-radius: 12px;
+            }
+
+            .food-image {
+                height: 135px;
+            }
+
+            .food-info {
+                padding: 9px;
+            }
+
+            .food-info h3 {
+                font-size: 10px;
+            }
+
+            .food-info p {
+                font-size: 7px;
+
+                min-height: 24px;
+
+                margin-bottom: 8px;
+            }
+
+            .food-price {
+                font-size: 9px;
+            }
+
+            .add-btn {
+                padding: 7px 9px;
+
+                font-size: 7px;
+            }
+
+            .cart {
+                width: 100%;
+            }
+
+            .branch-grid,
+            .payment-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        @media (max-width: 380px) {
+
+            .food-grid {
+                gap: 6px;
+            }
+
+            .food-image {
+                height: 120px;
+            }
+
+            .food-info {
+                padding: 8px;
+            }
+
+            .food-info h3 {
+                font-size: 9px;
+            }
+
+            .food-info p {
+                font-size: 6.5px;
+            }
+
+            .add-btn {
+                padding: 6px 8px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            SPANISH
+        </a>
+
+
+        <nav class="nav" id="nav">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html" class="active">
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="developer.html">
+                Developer
+            </a>
+
+        </nav>
+
+
+        <!-- CART -->
+
+        <a href="javascript:void(0)"
+           class="nav-cart"
+           onclick="openCart()">
+
+            🛒
+
+            <span id="navCartCount">
+                0
+            </span>
+
+        </a>
+
+
+        <button class="menu-toggle"
+                id="menuToggle">
+
+            ☰
+
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MENU
+===================================================== -->
+
+<main class="menu-page">
+
+    <div class="container">
+
+
+        <div class="menu-heading">
+
+            <span>
+                SPANISH FAST FOOD
+            </span>
+
+            <h1>
+                Our Menu
+            </h1>
+
+            <p>
+                Fresh. Hot. Delicious.
+            </p>
+
+        </div>
+<!-- =========================================
+     RESTAURANT MENU IMAGES
+========================================= -->
+
+<section class="menu-images-section">
+
+    <div class="menu-images-container">
+
+        <!-- LEFT MENU -->
+
+        <div class="menu-image-box">
+
+            <img
+                src="Spimages/menu.jpeg"
+                alt="Spanish Menu">
+
+        </div>
+
+
+        <!-- RIGHT MENU -->
+
+        <div class="menu-image-box">
+
+            <img
+                src="Spimages/Srk.jpeg"
+                alt="Spanish Food Menu">
+
+        </div>
+
+    </div>
+
+</section>
+
+        <!-- =================================================
+             CATEGORIES
+        ================================================== -->
+
+        <div class="categories">
+
+            <button class="category-btn active"
+                    data-category="all">
+                All
+            </button>
+
+            <button class="category-btn"
+                    data-category="pizza">
+                🍕 Pizza
+            </button>
+
+            <button class="category-btn"
+                    data-category="burger">
+                🍔 Burger
+            </button>
+
+            <button class="category-btn"
+                    data-category="shawarma">
+                🌯 Shawarma
+            </button>
+
+            <button class="category-btn"
+                    data-category="wings">
+                🍗 Wings
+            </button>
+
+            <button class="category-btn"
+                    data-category="fries">
+                🍟 Fries
+            </button>
+
+            <button class="category-btn"
+                    data-category="drinks">
+                🥤 Drinks
+            </button>
+
+            <button class="category-btn"
+                    data-category="shakes">
+                🥤 Shakes
+            </button>
+
+        </div>
+
+
+        <!-- =================================================
+             FOOD
+        ================================================== -->
+
+        <div class="food-grid">
+
+
+            <!-- PIZZA -->
+
+            <article class="food-card"
+                     data-category="pizza">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=900&q=85"
+                         alt="Small Pizza">
+
+                    <span class="food-tag">
+                        POPULAR
+                    </span>
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Small Pizza
+                    </h3>
+
+                    <p>
+                        Fresh pizza with delicious toppings.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 850
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Small Pizza"
+                                data-price="850"
+                                data-image="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="pizza">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=85"
+                         alt="Large Pizza">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Large Pizza
+                    </h3>
+
+                    <p>
+                        Loaded pizza for family and friends.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 1900
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Large Pizza"
+                                data-price="1900"
+                                data-image="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="pizza">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=900&q=85"
+                         alt="Pepperoni Pizza">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Pepperoni Pizza
+                    </h3>
+
+                    <p>
+                        Cheese with delicious pepperoni.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 1900 
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Pepperoni Pizza"
+                                data-price="1900"
+                                data-image="https://images.unsplash.com/photo-1579751626657-72bc17010498?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="pizza">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=900&q=85"
+                         alt="Cheese Pizza">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Cheese Pizza
+                    </h3>
+
+                    <p>
+                        Extra cheesy signature pizza.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 1900
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Cheese Pizza"
+                                data-price="1900"
+                                data-image="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- BURGERS -->
+
+            <article class="food-card"
+                     data-category="burger">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=85"
+                         alt="Classic Burger">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Classic Burger
+                    </h3>
+
+                    <p>
+                        Juicy chicken burger with fresh salad.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 450
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Classic Burger"
+                                data-price="450"
+                                data-image="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="burger">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=900&q=85"
+                         alt="Cheese Burger">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Cheese Burger
+                    </h3>
+
+                    <p>
+                        Juicy burger with melted cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 450
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Cheese Burger"
+                                data-price="450"
+                                data-image="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="burger">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=900&q=85"
+                         alt="Double Burger">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Double Burger
+                    </h3>
+
+                    <p>
+                        Double chicken patties and cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 600
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Double Burger"
+                                data-price="600"
+                                data-image="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SHAWARMA -->
+
+            <article class="food-card"
+                     data-category="shawarma">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=900&q=85"
+                         alt="Chicken Shawarma">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Chicken Shawarma
+                    </h3>
+
+                    <p>
+                        Tender chicken with signature sauce.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 280
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Chicken Shawarma"
+                                data-price="280"
+                                data-image="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="shawarma">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=900&q=85"
+                         alt="Cheese Shawarma">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Cheese Shawarma
+                    </h3>
+
+                    <p>
+                        Chicken shawarma with creamy cheese.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 400
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Cheese Shawarma"
+                                data-price="400"
+                                data-image="https://images.unsplash.com/photo-1561651823-34feb02250e4?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- WINGS -->
+
+            <article class="food-card"
+                     data-category="wings">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=900&q=85"
+                         alt="Chicken Wings">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Chicken Wings
+                    </h3>
+
+                    <p>
+                        Crispy spicy chicken wings.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 600
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Chicken Wings"
+                                data-price="600"
+                                data-image="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="wings">
+
+                <div class="food-image">
+
+                    <img src="Spimages/bbq.jpeg"
+                         alt="Hot Wings">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Hot Wings
+                    </h3>
+
+                    <p>
+                        Crispy wings with special seasoning.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 600
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Hot Wings"
+                                data-price="600"
+                                data-image="https://images.unsplash.com/photo-1608039755401-742486e7c7ec?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- FRIES -->
+
+            <article class="food-card"
+                     data-category="fries">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=900&q=85"
+                         alt="French Fries">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                       Regular French Fries
+                    </h3>
+
+                    <p>
+                        Crispy golden seasoned fries.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 250
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="French Fries"
+                                data-price="250"
+                                data-image="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="fries">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=900&q=85"
+                         alt="Loaded Fries">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Loaded Fries
+                    </h3>
+
+                    <p>
+                        Fries with cheese and special sauce.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 500
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Loaded Fries"
+                                data-price="500"
+                                data-image="https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- DRINKS -->
+
+            <article class="food-card"
+                     data-category="drinks">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=900&q=85"
+                         alt="Cold Drink">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Cold Drink
+                    </h3>
+
+                    <p>
+                        Chilled refreshing soft drink.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 100
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Cold Drink"
+                                data-price="100"
+                                data-image="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="drinks">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=900&q=85"
+                         alt="Fresh Lemon">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Fresh Lemon
+                    </h3>
+
+                    <p>
+                        Cold and refreshing lemon drink.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 199
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Fresh Lemon"
+                                data-price="199"
+                                data-image="https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- SHAKES -->
+
+            <article class="food-card"
+                     data-category="shakes">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=900&q=85"
+                         alt="Chocolate Shake">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Chocolate Shake
+                    </h3>
+
+                    <p>
+                        Rich creamy chocolate shake.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 400
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Chocolate Shake"
+                                data-price="400"
+                                data-image="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <article class="food-card"
+                     data-category="shakes">
+
+                <div class="food-image">
+
+                    <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=900&q=85"
+                         alt="Vanilla Shake">
+
+                </div>
+
+                <div class="food-info">
+
+                    <h3>
+                        Vanilla Shake
+                    </h3>
+
+                    <p>
+                        Smooth creamy vanilla shake.
+                    </p>
+
+                    <div class="food-bottom">
+
+                        <span class="food-price">
+                            Rs. 400
+                        </span>
+
+                        <button class="add-btn"
+                                data-name="Vanilla Shake"
+                                data-price="400"
+                                data-image="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=80">
+
+                            + Add
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</main>
+
+
+
+<!-- =====================================================
+     CART OVERLAY
+===================================================== -->
+
+<div class="cart-overlay"
+     id="cartOverlay">
+</div>
+
+
+
+<!-- =====================================================
+     CART
+===================================================== -->
+
+<aside class="cart"
+       id="cart">
+
+
+    <div class="cart-header">
+
+        <h2>
+            🛒 Your Order
+        </h2>
+
+        <button class="close-cart"
+                onclick="closeCart()">
+
+            ×
+
+        </button>
+
+    </div>
+
+
+    <div class="cart-body">
+
+
+        <div id="cartItems">
+        </div>
+
+
+        <!-- BRANCH -->
+
+        <section class="cart-section">
+
+            <h3>
+                📍 Select Branch
+            </h3>
+
+            <div class="branch-grid">
+
+
+                <div class="branch-option">
+
+                    <input type="radio"
+                           name="branch"
+                           id="taxila"
+                           value="Taxila">
+
+                    <label for="taxila">
+
+                        <strong>
+                            Spanish Taxila
+                        </strong>
+
+                        <small>
+                            0317 3664422
+                        </small>
+
+                    </label>
+
+                </div>
+
+
+                <div class="branch-option">
+
+                    <input type="radio"
+                           name="branch"
+                           id="hassan"
+                           value="Hassan Abdaal">
+
+                    <label for="hassan">
+
+                        <strong>
+                            Spanish Hassan Abdaal
+                        </strong>
+
+                        <small>
+                            0315 5494443
+                        </small>
+
+                    </label>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PAYMENT -->
+
+        <section class="cart-section">
+
+            <h3>
+                💳 Payment Method
+            </h3>
+
+
+            <div class="payment-grid">
+
+
+                <div class="payment-option">
+
+                    <input type="radio"
+                           name="payment"
+                           id="easypaisa"
+                           value="EasyPaisa">
+
+                    <label for="easypaisa">
+                        EasyPaisa
+                    </label>
+
+                </div>
+
+
+                <div class="payment-option">
+
+                    <input type="radio"
+                           name="payment"
+                           id="jazzcash"
+                           value="JazzCash">
+
+                    <label for="jazzcash">
+                        JazzCash
+                    </label>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="payment-info"
+                 id="paymentInfo">
+
+                Select your payment method.
+
+            </div>
+
+
+            <div class="screenshot">
+
+                <p>
+                    📸 After payment, upload screenshot
+                </p>
+
+                <input type="file"
+                       id="paymentScreenshot"
+                       accept="image/*">
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TOTAL -->
+
+        <div class="total-box">
+
+            <div class="total-row">
+
+                <span>
+                    Items
+                </span>
+
+                <strong id="totalItems">
+                    0
+                </strong>
+
+            </div>
+
+
+            <div class="total-row final-total">
+
+                <span>
+                    TOTAL
+                </span>
+
+                <strong id="cartTotal">
+                    Rs. 0
+                </strong>
+
+            </div>
+
+
+            <button class="whatsapp-btn"
+                    onclick="sendOrder()">
+
+                💬 SEND ORDER ON WHATSAPP
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</aside>
+
+
+
+<script>
+
+/* =========================================================
+   CART DATA
+========================================================= */
+
+const CART_STORAGE =
+    "spanishCart";
+
+let cart =
+    JSON.parse(
+        localStorage.getItem(
+            CART_STORAGE
+        )
+    ) || [];
+
+
+
+/* =========================================================
+   SAVE
+========================================================= */
+
+function saveCart() {
+
+    localStorage.setItem(
+        CART_STORAGE,
+        JSON.stringify(cart)
+    );
+
+}
+
+
+
+/* =========================================================
+   OPEN / CLOSE
+========================================================= */
+
+function openCart() {
+
+    document
+        .getElementById("cart")
+        .classList.add("active");
+
+    document
+        .getElementById("cartOverlay")
+        .classList.add("active");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+function closeCart() {
+
+    document
+        .getElementById("cart")
+        .classList.remove("active");
+
+    document
+        .getElementById("cartOverlay")
+        .classList.remove("active");
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+document
+    .getElementById("cartOverlay")
+    .addEventListener(
+        "click",
+        closeCart
+    );
+
+
+
+/* =========================================================
+   ADD TO CART
+========================================================= */
+
+document.addEventListener(
+    "click",
+    function(e) {
+
+        const button =
+            e.target.closest(
+                ".add-btn"
+            );
+
+        if (!button) return;
+
+
+        const name =
+            button.dataset.name;
+
+        const price =
+            Number(
+                button.dataset.price
+            );
+
+        const image =
+            button.dataset.image;
+
+
+        const existing =
+            cart.find(
+                item =>
+                    item.name === name
+            );
+
+
+        if (existing) {
+
+            existing.quantity++;
+
+        } else {
+
+            cart.push({
+
+                name,
+
+                price,
+
+                image,
+
+                quantity: 1
+
+            });
+
+        }
+
+
+        saveCart();
+
+        renderCart();
+
+        openCart();
+
+    }
+);
+
+
+
+/* =========================================================
+   RENDER
+========================================================= */
+
+function renderCart() {
+
+    const box =
+        document.getElementById(
+            "cartItems"
+        );
+
+
+    const count =
+        cart.reduce(
+            (total, item) =>
+                total +
+                item.quantity,
+            0
+        );
+
+
+    const total =
+        cart.reduce(
+            (sum, item) =>
+                sum +
+                item.price *
+                item.quantity,
+            0
+        );
+
+
+    document.getElementById(
+        "navCartCount"
+    ).textContent = count;
+
+
+    document.getElementById(
+        "totalItems"
+    ).textContent = count;
+
+
+    document.getElementById(
+        "cartTotal"
+    ).textContent =
+        "Rs. " +
+        total.toLocaleString();
+
+
+    if (!cart.length) {
+
+        box.innerHTML = `
+
+            <div class="empty">
+
+                <div class="empty-icon">
+                    🛒
+                </div>
+
+                <h3>
+                    Cart is empty
+                </h3>
+
+                <p>
+                    Add something delicious first.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    box.innerHTML =
+        cart.map(
+            (item, index) => `
+
+            <div class="cart-item">
+
+                <div class="cart-item-image">
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}">
+
+                </div>
+
+
+                <div>
+
+                    <h3 class="cart-item-name">
+                        ${item.name}
+                    </h3>
+
+                    <p class="cart-item-price">
+                        Rs. ${item.price.toLocaleString()}
+                    </p>
+
+
+                    <div class="quantity">
+
+                        <button
+                            onclick="changeQuantity(${index}, -1)">
+                            −
+                        </button>
+
+                        <span>
+                            ${item.quantity}
+                        </span>
+
+                        <button
+                            onclick="changeQuantity(${index}, 1)">
+                            +
+                        </button>
+
+                    </div>
+
+
+                    <button
+                        class="remove"
+                        onclick="removeItem(${index})">
+
+                        Remove
+
+                    </button>
+
+                </div>
+
+
+                <div class="cart-item-total">
+
+                    Rs.
+                    ${(item.price *
+                      item.quantity)
+                      .toLocaleString()}
+
+                </div>
+
+            </div>
+
+        `
+        ).join("");
+
+}
+
+
+
+/* =========================================================
+   QUANTITY
+========================================================= */
+
+function changeQuantity(index, amount) {
+
+    if (!cart[index]) return;
+
+
+    cart[index].quantity += amount;
+
+
+    if (cart[index].quantity <= 0) {
+
+        cart.splice(index, 1);
+
+    }
+
+
+    saveCart();
+
+    renderCart();
+
+}
+
+
+
+/* =========================================================
+   REMOVE
+========================================================= */
+
+function removeItem(index) {
+
+    cart.splice(index, 1);
+
+    saveCart();
+
+    renderCart();
+
+}
+
+
+
+/* =========================================================
+   PAYMENT INFO
+========================================================= */
+
+document
+    .querySelectorAll(
+        'input[name="payment"]'
+    )
+    .forEach(
+        input => {
+
+            input.addEventListener(
+                "change",
+                function() {
+
+                    const info =
+                        document.getElementById(
+                            "paymentInfo"
+                        );
+
+
+                    if (
+                        this.value ===
+                        "EasyPaisa"
+                    ) {
+
+                        info.innerHTML = `
+                            <strong>EasyPaisa</strong><br>
+                            Send your payment to:<br>
+                            <strong>YOUR EASYPAISA NUMBER</strong>
+                        `;
+
+                    }
+
+
+                    if (
+                        this.value ===
+                        "JazzCash"
+                    ) {
+
+                        info.innerHTML = `
+                            <strong>JazzCash</strong><br>
+                            Send your payment to:<br>
+                            <strong>YOUR JAZZCASH NUMBER</strong>
+                        `;
+
+                    }
+
+                }
+            );
+
+        }
+    );
+
+
+
+/* =========================================================
+   SEND WHATSAPP
+========================================================= */
+
+function sendOrder() {
+
+    if (!cart.length) {
+
+        alert(
+            "Please add an item first."
+        );
+
+        return;
+
+    }
+
+
+    const branch =
+        document.querySelector(
+            'input[name="branch"]:checked'
+        );
+
+
+    const payment =
+        document.querySelector(
+            'input[name="payment"]:checked'
+        );
+
+
+    const screenshot =
+        document.getElementById(
+            "paymentScreenshot"
+        ).files[0];
+
+
+    if (!branch) {
+
+        alert(
+            "Please select your branch."
+        );
+
+        return;
+
+    }
+
+
+    if (!payment) {
+
+        alert(
+            "Please select EasyPaisa or JazzCash."
+        );
+
+        return;
+
+    }
+
+
+    if (!screenshot) {
+
+        alert(
+            "Please upload your payment screenshot."
+        );
+
+        return;
+
+    }
+
+
+    const total =
+        cart.reduce(
+            (sum, item) =>
+                sum +
+                item.price *
+                item.quantity,
+            0
+        );
+
+
+    let message =
+        "🍔 *SPANISH FAST FOOD ORDER*%0A%0A";
+
+
+    message +=
+        "📍 Branch: " +
+        encodeURIComponent(
+            branch.value
+        ) +
+        "%0A";
+
+
+    message +=
+        "💳 Payment: " +
+        encodeURIComponent(
+            payment.value
+        ) +
+        "%0A%0A";
+
+
+    message +=
+        "🛒 *ORDER ITEMS*%0A";
+
+
+    cart.forEach(
+        item => {
+
+            message +=
+                "• " +
+                encodeURIComponent(
+                    item.name
+                ) +
+                " x" +
+                item.quantity +
+                " = Rs. " +
+                (
+                    item.price *
+                    item.quantity
+                ) +
+                "%0A";
+
+        }
+    );
+
+
+    message +=
+        "%0A💰 *TOTAL: Rs. " +
+        total +
+        "*%0A%0A";
+
+
+    message +=
+        "📸 Payment screenshot attached by customer.";
+
+
+    let whatsappNumber =
+        "923173664422";
+
+
+    if (
+        branch.value ===
+        "Hassan Abdaal"
+    ) {
+
+        whatsappNumber =
+            "923155494443";
+
+    }
+
+
+    const url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message;
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+}
+
+
+
+/* =========================================================
+   CATEGORY FILTER
+========================================================= */
+
+const categoryButtons =
+    document.querySelectorAll(
+        ".category-btn"
+    );
+
+const foodCards =
+    document.querySelectorAll(
+        ".food-card"
+    );
+
+
+categoryButtons.forEach(
+    button => {
+
+        button.addEventListener(
+            "click",
+            function() {
+
+                categoryButtons.forEach(
+                    btn =>
+                        btn.classList.remove(
+                            "active"
+                        )
+                );
+
+
+                this.classList.add(
+                    "active"
+                );
+
+
+                const category =
+                    this.dataset.category;
+
+
+                foodCards.forEach(
+                    card => {
+
+                        if (
+                            category ===
+                            "all" ||
+                            card.dataset.category ===
+                            category
+                        ) {
+
+                            card.style.display =
+                                "";
+
+                        } else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    }
+);
+
+
+
+/* =========================================================
+   MOBILE NAV
+========================================================= */
+
+const menuToggle =
+    document.getElementById(
+        "menuToggle"
+    );
+
+const nav =
+    document.getElementById(
+        "nav"
+    );
+
+
+if (menuToggle && nav) {
+
+    menuToggle.addEventListener(
+        "click",
+        () => {
+
+            nav.classList.toggle(
+                "active"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+renderCart();
+
+</script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const button = document.getElementById("mobileMenuBtn");
+    const nav = document.getElementById("mainNav");
+
+    if (!button || !nav) {
+        return;
+    }
+
+    button.addEventListener("click", function (event) {
+
+        event.stopPropagation();
+
+        nav.classList.toggle("mobile-open");
+
+    });
+
+
+    nav.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            nav.classList.remove("mobile-open");
+
+        });
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
