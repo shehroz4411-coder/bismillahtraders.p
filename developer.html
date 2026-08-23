@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Developer | Shehroz Khan</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="spanish.css"
+    >
+
+
+    <style>
+
+        /* =========================================
+           DEVELOPER HERO
+        ========================================= */
+
+        .dev-hero {
+
+            min-height: 680px;
+
+            padding: 150px 0 100px;
+
+            display: flex;
+
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 80% 30%,
+                    rgba(255,59,32,.12),
+                    transparent 35%
+                ),
+                #090909;
+
+        }
+
+
+        .dev-container {
+
+            width: min(1150px,92%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.1fr .9fr;
+
+            gap: 70px;
+
+            align-items: center;
+
+        }
+
+
+        .dev-label {
+
+            color: #ff3b20;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .dev-hero h1 {
+
+            margin: 15px 0;
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(55px,8vw,95px);
+
+            line-height: .95;
+
+        }
+
+
+        .dev-hero h1 strong {
+
+            color: #ff3b20;
+
+            display: block;
+
+        }
+
+
+        .dev-description {
+
+            max-width: 600px;
+
+            color: #888;
+
+            font-size: 13px;
+
+            line-height: 1.9;
+
+            margin: 25px 0;
+
+        }
+
+
+        .dev-buttons {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .dev-btn {
+
+            padding: 14px 22px;
+
+            border-radius: 7px;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            text-decoration: none;
+
+            transition: .3s;
+
+        }
+
+
+        .dev-btn.primary {
+
+            background: #ff3b20;
+
+            color: white;
+
+        }
+
+
+        .dev-btn.primary:hover {
+
+            background: #d92810;
+
+            transform:
+                translateY(-3px);
+
+        }
+
+
+        .dev-btn.secondary {
+
+            color: #aaa;
+
+            border: 1px solid
+                rgba(255,255,255,.12);
+
+        }
+
+
+        .dev-btn.secondary:hover {
+
+            color: white;
+
+            border-color: #ff3b20;
+
+        }
+
+
+        /* =========================================
+           DEVELOPER IMAGE
+        ========================================= */
+
+        .dev-photo-box {
+
+            position: relative;
+
+            display: flex;
+
+            justify-content: center;
+
+        }
+
+
+        .dev-photo {
+
+            width: min(380px,100%);
+
+            aspect-ratio: 1/1;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            border: 1px solid
+                rgba(255,255,255,.1);
+
+            filter: grayscale(15%);
+
+            box-shadow:
+                0 30px 90px
+                rgba(0,0,0,.6);
+
+        }
+
+
+        .dev-photo-box::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 380px;
+
+            height: 380px;
+
+            border: 1px solid
+                rgba(255,59,32,.35);
+
+            border-radius: 25px;
+
+            transform:
+                rotate(6deg);
+
+            z-index: 0;
+
+        }
+
+
+        .dev-photo {
+
+            position: relative;
+
+            z-index: 1;
+
+        }
+
+
+        .dev-badge {
+
+            position: absolute;
+
+            z-index: 2;
+
+            right: 0;
+
+            bottom: 25px;
+
+            padding: 14px 18px;
+
+            background: #151515;
+
+            border: 1px solid
+                rgba(255,255,255,.1);
+
+            border-radius: 10px;
+
+            box-shadow:
+                0 15px 40px
+                rgba(0,0,0,.5);
+
+        }
+
+
+        .dev-badge strong {
+
+            display: block;
+
+            color: #ff3b20;
+
+            font-size: 13px;
+
+        }
+
+
+        .dev-badge span {
+
+            color: #777;
+
+            font-size: 7px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
+        .dev-intro {
+
+            padding: 100px 0;
+
+            background: #0d0d0d;
+
+        }
+
+
+        .dev-intro-container {
+
+            width: min(850px,92%);
+
+            margin: auto;
+
+            text-align: center;
+
+        }
+
+
+        .dev-intro-container > span {
+
+            color: #ff3b20;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .dev-intro h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(38px,6vw,60px);
+
+            line-height: 1.05;
+
+            margin: 15px 0 25px;
+
+        }
+
+
+        .dev-intro p {
+
+            color: #777;
+
+            font-size: 12px;
+
+            line-height: 2;
+
+        }
+
+
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        .dev-skills {
+
+            padding: 100px 0;
+
+        }
+
+
+        .dev-section-title {
+
+            width: min(1150px,92%);
+
+            margin: auto auto 45px;
+
+        }
+
+
+        .dev-section-title span {
+
+            color: #ff3b20;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 4px;
+
+        }
+
+
+        .dev-section-title h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size: 48px;
+
+            margin-top: 10px;
+
+        }
+
+
+        .skills-grid {
+
+            width: min(1150px,92%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(5,1fr);
+
+            gap: 14px;
+
+        }
+
+
+        .skill {
+
+            padding: 30px 15px;
+
+            text-align: center;
+
+            background: #151515;
+
+            border: 1px solid
+                rgba(255,255,255,.06);
+
+            border-radius: 12px;
+
+            transition: .3s;
+
+        }
+
+
+        .skill:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                rgba(255,59,32,.4);
+
+        }
+
+
+        .skill-icon {
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .skill h3 {
+
+            font-size: 11px;
+
+        }
+
+
+        .skill p {
+
+            margin-top: 7px;
+
+            color: #666;
+
+            font-size: 8px;
+
+        }
+
+
+
+        /* =========================================
+           SERVICES
+        ========================================= */
+
+        .dev-services {
+
+            padding: 100px 0;
+
+            background: #0d0d0d;
+
+        }
+
+
+        .services-grid {
+
+            width: min(1150px,92%);
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 18px;
+
+        }
+
+
+        .service {
+
+            padding: 35px 28px;
+
+            background: #151515;
+
+            border-radius: 15px;
+
+            border: 1px solid
+                rgba(255,255,255,.06);
+
+        }
+
+
+        .service-number {
+
+            color: #ff3b20;
+
+            font-size: 10px;
+
+            font-weight: 900;
+
+        }
+
+
+        .service h3 {
+
+            margin: 15px 0 10px;
+
+            font-size: 17px;
+
+        }
+
+
+        .service p {
+
+            color: #777;
+
+            font-size: 10px;
+
+            line-height: 1.8;
+
+        }
+
+
+
+        /* =========================================
+           PROJECT CREDIT
+        ========================================= */
+
+        .project-credit {
+
+            padding: 100px 0;
+
+            text-align: center;
+
+        }
+
+
+        .project-box {
+
+            width: min(850px,92%);
+
+            margin: auto;
+
+            padding: 55px 30px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #191919,
+                    #101010
+                );
+
+            border: 1px solid
+                rgba(255,255,255,.08);
+
+        }
+
+
+        .project-box span {
+
+            color: #ff3b20;
+
+            font-size: 9px;
+
+            font-weight: 900;
+
+            letter-spacing: 3px;
+
+        }
+
+
+        .project-box h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(35px,5vw,55px);
+
+            margin: 12px 0;
+
+        }
+
+
+        .project-box p {
+
+            max-width: 600px;
+
+            margin: auto;
+
+            color: #777;
+
+            font-size: 11px;
+
+            line-height: 1.9;
+
+        }
+
+
+        .project-name {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            color: #ff3b20;
+
+            font-size: 11px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+
+        }
+
+
+
+        /* =========================================
+           FINAL CTA
+        ========================================= */
+
+        .dev-cta {
+
+            padding: 100px 20px;
+
+            text-align: center;
+
+            background: #080808;
+
+        }
+
+
+        .dev-cta h2 {
+
+            font-family:
+                "Playfair Display",
+                serif;
+
+            font-size:
+                clamp(40px,6vw,65px);
+
+            margin: 12px 0;
+
+        }
+
+
+        .dev-cta p {
+
+            color: #777;
+
+            font-size: 11px;
+
+            margin-bottom: 25px;
+
+        }
+
+
+
+        /* =========================================
+           MOBILE
+        ========================================= */
+
+        @media(max-width:850px) {
+
+            .dev-hero {
+
+                padding-top: 120px;
+
+            }
+
+
+            .dev-container {
+
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+            }
+
+
+            .dev-description {
+
+                margin-left: auto;
+
+                margin-right: auto;
+
+            }
+
+
+            .dev-buttons {
+
+                justify-content: center;
+
+            }
+
+
+            .dev-photo-box {
+
+                margin-top: 30px;
+
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    repeat(2,1fr);
+
+            }
+
+
+            .services-grid {
+
+                grid-template-columns: 1fr;
+
+            }
+
+        }
+
+
+        @media(max-width:500px) {
+
+            .dev-photo {
+
+                width: 290px;
+
+            }
+
+
+            .dev-photo-box::before {
+
+                width: 290px;
+
+                height: 290px;
+
+            }
+
+
+            .dev-badge {
+
+                right: 5px;
+
+                bottom: 15px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================
+     NAVBAR
+========================================= -->
+
+<header class="header">
+
+    <div class="nav-container">
+
+        <a href="index.html" class="logo">
+            SPANISH
+        </a>
+
+        <nav class="nav" id="mainNav">
+
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+            <a href="developer.html" class="active">Developer</a>
+
+        </nav>
+
+        <button
+            class="mobile-menu-btn"
+            id="mobileMenuBtn"
+            type="button">
+            ☰
+        </button>
+
+        <a href="menu.html" class="nav-cart">
+            🛒
+        </a>
+
+    </div>
+
+</header>
+
+<!-- =========================================
+     HERO
+========================================= -->
+
+<section class="dev-hero">
+
+    <div class="dev-container">
+
+
+        <div>
+
+            <span class="dev-label">
+                THE PERSON BEHIND THE WEBSITE
+            </span>
+
+
+            <h1>
+
+                Meet
+                <strong>
+                    Shehroz Khan.
+                </strong>
+
+            </h1>
+
+
+            <p class="dev-description">
+
+                This website was designed and developed
+                by <strong>Shehroz Khan</strong>, a passionate
+                Full-Stack Web Developer who loves turning
+                ideas into modern, responsive and
+                professional websites.
+
+            </p>
+
+
+            <div class="dev-buttons">
+
+                <a
+                    href="https://wa.me/923038029831"
+                    target="_blank"
+                    class="dev-btn primary"
+                >
+                    CONTACT DEVELOPER →
+                </a>
+
+
+                <a
+                    href="index.html"
+                    class="dev-btn secondary"
+                >
+                    VIEW WEBSITE
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PHOTO -->
+
+        <div class="dev-photo-box">
+
+            <!--
+                Replace this image with
+                your own developer photo.
+            -->
+
+            <img
+                src="Spimages/WhatsApp Image 2026-08-14 at 4.37.28 PM.jpeg"
+                alt="Shehroz Khan - Web Developer"
+                class="dev-photo"
+            >
+
+
+            <div class="dev-badge">
+
+                <strong>
+                    FULL-STACK
+                </strong>
+
+                <span>
+                    WEB DEVELOPER
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     ABOUT DEVELOPER
+========================================= -->
+
+<section class="dev-intro">
+
+    <div class="dev-intro-container">
+
+        <span>
+            ABOUT THE DEVELOPER
+        </span>
+
+
+        <h2>
+            Building Digital
+            Experiences With Purpose.
+        </h2>
+
+
+        <p>
+
+            Shehroz Khan focuses on creating websites
+            that are not only visually attractive but
+            also responsive, functional and easy to use.
+
+            From the first design idea to the final
+            working website, every part is built with
+            attention to detail.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SKILLS
+========================================= -->
+
+<section class="dev-skills">
+
+
+    <div class="dev-section-title">
+
+        <span>
+            TECH STACK
+        </span>
+
+        <h2>
+            Skills & Technologies
+        </h2>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                🌐
+            </div>
+
+            <h3>
+                HTML5
+            </h3>
+
+            <p>
+                Modern Structure
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                🎨
+            </div>
+
+            <h3>
+                CSS3
+            </h3>
+
+            <p>
+                Responsive Design
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                ⚡
+            </div>
+
+            <h3>
+                JavaScript
+            </h3>
+
+            <p>
+                Interactive Websites
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                🟢
+            </div>
+
+            <h3>
+                Node.js
+            </h3>
+
+            <p>
+                Backend Development
+            </p>
+
+        </div>
+
+
+        <div class="skill">
+
+            <div class="skill-icon">
+                🍃
+            </div>
+
+            <h3>
+                MongoDB
+            </h3>
+
+            <p>
+                Database Systems
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SERVICES
+========================================= -->
+
+<section class="dev-services">
+
+
+    <div class="dev-section-title">
+
+        <span>
+            WHAT I BUILD
+        </span>
+
+        <h2>
+            Development Services
+        </h2>
+
+    </div>
+
+
+    <div class="services-grid">
+
+
+        <div class="service">
+
+            <span class="service-number">
+                01
+            </span>
+
+            <h3>
+                Business Websites
+            </h3>
+
+            <p>
+
+                Professional websites for businesses,
+                brands, restaurants and personal
+                projects.
+
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">
+                02
+            </span>
+
+            <h3>
+                Full-Stack Development
+            </h3>
+
+            <p>
+
+                Frontend interfaces connected with
+                functional backend systems and
+                databases.
+
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">
+                03
+            </span>
+
+            <h3>
+                Responsive Design
+            </h3>
+
+            <p>
+
+                Websites designed to work smoothly
+                across phones, tablets and desktop
+                screens.
+
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">
+                04
+            </span>
+
+            <h3>
+                Restaurant Websites
+            </h3>
+
+            <p>
+
+                Digital menus, online ordering,
+                WhatsApp integration and modern
+                restaurant experiences.
+
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">
+                05
+            </span>
+
+            <h3>
+                Custom Features
+            </h3>
+
+            <p>
+
+                Custom functionality built around
+                the actual needs of each project.
+
+            </p>
+
+        </div>
+
+
+        <div class="service">
+
+            <span class="service-number">
+                06
+            </span>
+
+            <h3>
+                Website Deployment
+            </h3>
+
+            <p>
+
+                Helping projects move from local
+                development to a live website.
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     SPANISH PROJECT
+========================================= -->
+
+<section class="project-credit">
+
+    <div class="project-box">
+
+        <span>
+            FEATURED PROJECT
+        </span>
+
+
+        <h2>
+            SPANISH Fast Food
+        </h2>
+
+
+        <p>
+
+            This website was designed and developed
+            for SPANISH to provide a modern digital
+            experience with online menu browsing,
+            shopping cart functionality and
+            WhatsApp ordering.
+
+        </p>
+
+
+        <span class="project-name">
+            DESIGNED & DEVELOPED BY SHEHROZ KHAN
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================
+     CTA
+========================================= -->
+
+<section class="dev-cta">
+
+    <span class="dev-label">
+        HAVE AN IDEA?
+    </span>
+
+
+    <h2>
+        Let's Build Something.
+    </h2>
+
+
+    <p>
+        Have a website idea? Let's turn it into reality.
+    </p>
+
+
+    <a
+        href="https://wa.me/923038029831?text=Hello%20Shehroz%2C%20I%20want%20to%20discuss%20a%20website%20project."
+        target="_blank"
+        class="dev-btn primary"
+    >
+        START A PROJECT →
+    </a>
+
+</section>
+
+
+<!-- ================================
+     DEVELOPER FOOTER
+================================ -->
+
+<footer class="developer-footer">
+
+    <div class="developer-footer-container">
+
+        <div class="developer-footer-brand">
+
+            <div class="developer-logo">
+                S
+            </div>
+
+            <div>
+                <h3>Spanish</h3>
+
+                <p>
+                    Fast Food • Fresh Taste • Great Experience
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="developer-footer-info">
+
+            <span>WEBSITE & APP DEVELOPED BY</span>
+
+            <h2>
+                Shehroz Khan
+            </h2>
+
+            <p>
+                Modern websites and mobile applications
+                built with clean design and responsive
+                experience.
+            </p>
+
+        </div>
+
+
+        <div class="developer-footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="gallery.html">
+                Gallery
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="developer-footer-bottom">
+
+        <p>
+            © 2026 Spanish Fast Food. All Rights Reserved.
+        </p>
+
+        <p>
+            Developed by
+            <strong>Shehroz Khan</strong>
+        </p>
+
+    </div>
+
+</footer>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const button = document.getElementById("mobileMenuBtn");
+    const nav = document.getElementById("mainNav");
+
+    if (!button || !nav) return;
+
+    button.addEventListener("click", function () {
+
+        nav.classList.toggle("mobile-open");
+
+    });
+
+    nav.querySelectorAll("a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            nav.classList.remove("mobile-open");
+
+        });
+
+    });
+
+});
+
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
