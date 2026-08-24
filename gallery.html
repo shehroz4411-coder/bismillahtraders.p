@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spanish | Gallery</title>
+
+    <link rel="stylesheet" href="spanish.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #080808;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .gallery-page {
+            padding: 120px 5% 80px;
+        }
+
+        .gallery-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .gallery-heading {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .gallery-heading span {
+            color: #e31b23;
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 3px;
+        }
+
+        .gallery-heading h1 {
+            margin: 10px 0;
+            font-size: clamp(38px, 7vw, 65px);
+        }
+
+        .gallery-heading p {
+            color: #888;
+            font-size: 12px;
+        }
+
+        /* GALLERY GRID */
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 220px;
+            gap: 12px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            background: #111;
+            border: 1px solid #222;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: .4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: auto 0 0 0;
+            padding: 35px 15px 15px;
+
+            background: linear-gradient(
+                transparent,
+                rgba(0,0,0,.9)
+            );
+
+            opacity: 0;
+            transition: .3s;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay h3 {
+            margin: 0;
+            font-size: 13px;
+        }
+
+        .gallery-overlay p {
+            margin: 5px 0 0;
+            color: #aaa;
+            font-size: 8px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .gallery-page {
+                padding: 105px 4% 60px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 170px;
+                gap: 8px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+                grid-row: span 2;
+            }
+
+            .gallery-overlay {
+                opacity: 1;
+            }
+
+            .gallery-overlay h3 {
+                font-size: 10px;
+            }
+
+            .gallery-overlay p {
+                font-size: 7px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .gallery-grid {
+                grid-auto-rows: 145px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="header">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                SPANISH
+            </a>
+
+            <nav class="nav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="menu.html">
+                    Menu
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+                <a href="gallery.html" class="active">
+                    Gallery
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+                <a href="developer.html">
+                    Developer
+                </a>
+
+            </nav>
+
+            <a href="menu.html" class="nav-cart">
+                🛒
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- GALLERY -->
+
+    <main class="gallery-page">
+
+        <div class="gallery-container">
+
+            <div class="gallery-heading">
+
+                <span>
+                    SPANISH FAST FOOD
+                </span>
+
+                <h1>
+                    Our Gallery
+                </h1>
+
+                <p>
+                    A taste of what we serve.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+
+                <!-- 1 -->
+
+                <div class="gallery-item large">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=85"
+                        alt="Spanish Pizza">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Fresh Pizza
+                        </h3>
+
+                        <p>
+                            Hot & delicious
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 2 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=85"
+                        alt="Burger">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Signature Burger
+                        </h3>
+
+                        <p>
+                            Juicy & loaded
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 3 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1529006557810-274b9b2fc783?auto=format&fit=crop&w=800&q=85"
+                        alt="Shawarma">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Chicken Shawarma
+                        </h3>
+
+                        <p>
+                            Freshly prepared
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 4 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?auto=format&fit=crop&w=800&q=85"
+                        alt="Chicken Wings">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Crispy Wings
+                        </h3>
+
+                        <p>
+                            Spicy & crispy
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 5 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=85"
+                        alt="Fries">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Golden Fries
+                        </h3>
+
+                        <p>
+                            Crispy perfection
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 6 -->
+
+                <div class="gallery-item large">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?auto=format&fit=crop&w=1000&q=85"
+                        alt="Chocolate Shake">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Chocolate Shake
+                        </h3>
+
+                        <p>
+                            Rich & creamy
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 7 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=800&q=85"
+                        alt="Cold Drink">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Refreshing Drinks
+                        </h3>
+
+                        <p>
+                            Ice cold
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- 8 -->
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?auto=format&fit=crop&w=800&q=85"
+                        alt="Cheese Pizza">
+
+                    <div class="gallery-overlay">
+
+                        <h3>
+                            Cheese Pizza
+                        </h3>
+
+                        <p>
+                            Extra cheesy
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </main>
+<script>
+/* =========================================================
+   SPANISH — MOBILE NAV + IMAGE PICKER FIX
+   PASTE ONLY — NOTHING TO REMOVE
+========================================================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    /* =====================================================
+       MOBILE NAVBAR
+    ===================================================== */
+
+    const toggle =
+        document.querySelector(
+            "#menuToggle, #mobileMenuBtn, .menu-toggle"
+        );
+
+    const nav =
+        document.querySelector(
+            "#nav, #mainNav, .nav"
+        );
+
+    if (toggle && nav) {
+
+        toggle.addEventListener("click", function (e) {
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            nav.classList.toggle("active");
+            nav.classList.toggle("mobile-open");
+
+        });
+
+
+        /* Close menu after selecting a page */
+
+        nav.querySelectorAll("a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                nav.classList.remove("active");
+                nav.classList.remove("mobile-open");
+
+            });
+
+        });
+
+
+        /* Close when clicking outside */
+
+        document.addEventListener("click", function (e) {
+
+            if (
+                !nav.contains(e.target) &&
+                !toggle.contains(e.target)
+            ) {
+
+                nav.classList.remove("active");
+                nav.classList.remove("mobile-open");
+
+            }
+
+        });
+
+    }
+
+
+    /* =====================================================
+       PAYMENT SCREENSHOT PICKER
+    ===================================================== */
+
+    const screenshotInput =
+        document.getElementById(
+            "paymentScreenshot"
+        );
+
+    const screenshotButton =
+        document.querySelector(
+            ".choose-screenshot"
+        );
+
+    const screenshotPreview =
+        document.getElementById(
+            "screenshotPreview"
+        );
+
+    const removeScreenshot =
+        document.getElementById(
+            "removeScreenshot"
+        );
+
+
+    /* Open phone Gallery / Photos */
+
+    if (
+        screenshotButton &&
+        screenshotInput
+    ) {
+
+        screenshotButton.addEventListener(
+            "click",
+            function (e) {
+
+                e.preventDefault();
+
+                screenshotInput.click();
+
+            }
+        );
+
+    }
+
+
+    /* Image selected */
+
+    if (screenshotInput) {
+
+        screenshotInput.addEventListener(
+            "change",
+            function () {
+
+                const file =
+                    this.files &&
+                    this.files[0];
+
+                if (!file) return;
+
+
+                if (
+                    !file.type.startsWith(
+                        "image/"
+                    )
+                ) {
+
+                    alert(
+                        "Please select a screenshot image."
+                    );
+
+                    this.value = "";
+
+                    return;
+
+                }
+
+
+                if (screenshotPreview) {
+
+                    const imageURL =
+                        URL.createObjectURL(
+                            file
+                        );
+
+
+                    screenshotPreview.innerHTML = `
+
+                        <img
+                            src="${imageURL}"
+                            alt="Payment Screenshot"
+                            style="
+                                width:100%;
+                                max-height:200px;
+                                object-fit:contain;
+                                display:block;
+                                border-radius:10px;
+                            "
+                        >
+
+                    `;
+
+                }
+
+
+                if (removeScreenshot) {
+
+                    removeScreenshot.style.display =
+                        "block";
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* Remove selected screenshot */
+
+    if (removeScreenshot) {
+
+        removeScreenshot.addEventListener(
+            "click",
+            function () {
+
+                if (screenshotInput) {
+
+                    screenshotInput.value = "";
+
+                }
+
+
+                if (screenshotPreview) {
+
+                    screenshotPreview.innerHTML = `
+
+                        <span>
+                            No screenshot selected
+                        </span>
+
+                    `;
+
+                }
+
+
+                this.style.display =
+                    "none";
+
+            }
+        );
+
+    }
+
+});
+</script>
+</body>
+
+</html>
